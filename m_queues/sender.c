@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		return 0;
 	}
 
-	memset<buffer, 0, MSG_BUFFER_SIZE>;
+	memset(buffer, 0, MSG_BUFFER_SIZE);
 
 	printf("Enter the msg to be sent to receiver %s\n", argv[1]);
 	scanf("%s", buffer);
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	if(ret == -1)
 	{
 		perror("Client : Unable to send msg to server");
-		exit("EXIT_FAILURE");
+		exit(EXIT_FAILURE);
 	}
 
 	mq_close(recvr_msgq_fd);
