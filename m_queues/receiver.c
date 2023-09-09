@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	attr.mq_msgsize = MAX_MSG_SIZE;
 	attr.mq_flags = 0;
 
-	msgq_fd = mq_open(argv[1], O_RDONLY | O_CREATE, QUEUE_PERMISSIONS, &attr);
+	msgq_fd = mq_open(argv[1], O_RDONLY | O_CREAT, QUEUE_PERMISSIONS, &attr);
 
 	if(msgq_fd == -1)
 	{
