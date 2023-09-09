@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	printf("Enter the msg to be sent to receiver %s\n", argv[1]);
 	scanf("%s", buffer);
 
-	recvr_msgq_fd = mq_open(argv[1], O_WRONLY | O_CREATE, 0, 0);
+	recvr_msgq_fd = mq_open(argv[1], O_WRONLY | O_CREAT, 0, 0);
 
 	if(recvr_msgq_fd == -1)
 	{
